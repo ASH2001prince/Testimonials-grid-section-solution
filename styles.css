@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+:root{
+    /* ### Primary */
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+    /* ### Neutral */
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+}
+*, ::after, ::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #eee;
+}
+.container{
+    width: 83vw;
+    display: grid;
+    grid-template-columns: 80% 19%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.test{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.one-two{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 52% 23%;
+    min-height: 100%;
+    gap: 10px;
+}
+.three-four{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 23% 52%;
+    min-height: 100%;
+    gap: 10px;
+}
+.card{
+    padding: 20px;
+    border-radius: 6px;
+    min-height: 100%;
+}
+.card.first{
+    background-color: var(--Moderate-violet);   
+}
+.card.second{
+    background-color: var(--Very-dark-grayish-blue);   
+}
+.card.third{
+    background-color: var(--White);
+}
+.card.fourth{
+    background-color: var(--Very-dark-blackish-blue);
+}
+.card.fifth{
+    background-color: var(--White);
+    margin-left: -20%;
+}
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+.left-space{
+    margin-left: 15px;
+}
+img{
+    max-width: 50%;
+    height: 10%;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+h1{
+    font-size: 1.6rem;
+    color: var(--White);
+    font-weight: 500;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+h3{
+    font-size: 1rem;
+    color: var(--White);
+}
+span{
+    color: var(--White);
+    opacity: 0.5;
+}
+p{
+    line-height: 1.4;
+    color: var(--White);
+    opacity: 0.7;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+.black--h3{
+    color: black;
+}
+.black--span{
+    color: black;
+}
+.black--h1{
+    color: black;
+}
+.black--p{
+    color: black;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--Very-dark-blackish-blue);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    margin-left: 3px;
+    text-decoration: none;
+}
+.big-image{
+    max-width: 100%;
+    border-radius: 0;
+    border: none;
+    height: auto;
+    margin: -25px;
+    margin-left: 20%;
+}
+@media screen and (max-width: 1124px){
+    .container{
+        width: 97vw;
+    }
+    h1{
+        font-size: 1.4rem;
+        margin-top: 6px;
+        letter-spacing: 0.2px;
+        
+    }
+    h3{
+        font-size: 0.88rem;
+    }
+    p{
+        line-height: 1.2;
+        margin-top: 13px;
+        letter-spacing: 0.7px;
+    }
+    .one-two{
+        grid-template-columns: 52% 28%;
+    }
+    .three-four{
+        grid-template-columns: 28% 52%;
+    }
+
+}
+@media screen and (max-width: 860px){
+    .container{
+        width: 100vw;
+    }
+    .one-two{
+        grid-template-columns: 52% 28%;
+    }
+    .three-four{
+        grid-template-columns: 28% 52%;
+    }
+}
+@media screen and (max-width: 768px){
+    .container{
+        padding: 20px;
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    .one-two{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: auto;
+        min-height: 100%;
+        gap: 10px;
+    }
+    .three-four{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: auto;
+        min-height: 100%;
+        gap: 10px;
+    }
+    .card{
+        margin-top: 10px;
+        min-height: auto;
+    }
+    .card.fifth{
+        margin: 10px 0 0 0;
+    }
+}
